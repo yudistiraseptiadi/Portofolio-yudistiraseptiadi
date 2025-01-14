@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yudistira Septiadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>YUDISTIRA SEPTIADI</h1>
+        <nav>
+            <a href="#" class="active" onclick="showSection('home')">Beranda</a>
+            <!-- <a href="#" onclick="showSection('profile')">Profil</a> -->
+            <a href="#" onclick="showSection('projects')">Project</a>
+            <a href="#" onclick="showSection('contact')">Kontak</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+<section id="home" class="home-section active">
+    <div style="text-align: center; position: relative; padding: 3em 1em;">
+        <!-- Background Decoration -->
+        <div class="bg-home"></div>
+
+        <!-- Hero Content -->
+        <h2 class="hero-home">
+            Selamat Datang di Website Saya!
+        </h2>
+        <p class="p-home">
+            Saya <strong>Yudistira Septiadi</strong>, seorang mahasiswa Informatika yang terus belajar dan berkembang untuk menciptakan solusi teknologi yang inovatif.
+        </p>
+        <div class="div-lihatpf">
+            <a class="lihatpf" href="#profile" onclick="showSection('profile')">Lihat Profil Saya</a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Profile Section -->
+        <section id="profile" class="profile-section">
+            <h2 class="judulpf">Profil Saya</h2>
+        
+            <div class="div-pf">
+                <!-- Gambar Profil -->
+                <div style="position: relative;">
+                    <img src="yudisp.jpg" alt="Yudistira Septiadi">
+                    <div class="div-img"></div>
+                </div>
+        
+                <!-- Deskripsi Profil -->
+                <div class="desc-pf">
+                    <p class="p-pf">
+                        Halo! Saya <strong>Yudistira Septiadi</strong>, seorang mahasiswa <strong>Horizon University Indonesia</strong> program studi Informatika.
+                        Saya lahir di <strong>Bogor</strong> dan besar di <strong>Karawang</strong>. Saat ini saya berusia <strong>23 tahun</strong>.
+                        Saya memiliki semangat untuk terus belajar dan berkontribusi dalam dunia teknologi.
+                    </p>
+                    <p class="quotes">
+                        "Teknologi adalah jembatan menuju masa depan yang lebih baik."
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Projects Section -->
+        <section id="projects" class="project-section">
+            <h2>Project</h2>
+            <p class="intro-projects">
+                Di bawah ini adalah beberapa proyek yang telah saya kerjakan selama perjalanan saya dalam belajar teknologi. Setiap proyek ini mencerminkan kemampuan saya dalam mengembangkan solusi perangkat lunak untuk berbagai masalah yang ada.
+            </p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Program Kasir Sederhana (C++)</h3>
+                    <p>Proyek ini adalah program kasir sederhana untuk membantu manajemen transaksi pada toko kecil.</p>
+                    <a href="kasir.cpp" target="_blank">Lihat Detail</a>
+                </div>
+                <div class="project-card">
+                    <h3>Program E-Commerce (Java)</h3>
+                    <p>Aplikasi e-commerce berbasis Java yang dirancang untuk membantu pembeli dan penjual dalam satu platform.</p>
+                    <a href="ecommerce.java" target="_blank">Lihat Detail</a>
+                </div>
+                <div class="project-card">
+                    <h3>Program Kalkulator Sederhana (Java)</h3>
+                    <p>Sebuah aplikasi kalkulator sederhana untuk operasi matematika dasar.</p>
+                    <a href="kalkuator.java" target="_blank">Lihat Detail</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Kontak Saya</h2>
+            <p class="intro-contact">
+                Jika Anda ingin berdiskusi lebih lanjut, bertanya, atau memiliki pertanyaan lain, jangan ragu untuk menghubungi saya melalui salah satu platform berikut. Saya selalu siap untuk membantu dan berbagi informasi.
+            </p>
+            <div class="contact-icons">
+                <a href="https://www.instagram.com/yudistiraseptiadi/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6289685271147" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@yudistiraseptiadi5569" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:yudistiraaa007@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 YUDISTIRA SEPTIADI. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(s => s.classList.remove('active'));
+
+            // Show the selected section
+            const activeSection = document.getElementById(section);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+
+            // Highlight active menu item
+            const menuItems = document.querySelectorAll('nav a');
+            menuItems.forEach(item => item.classList.remove('active'));
+            const activeMenuItem = document.querySelector(`nav a[href="#${section}"]`);
+            if (activeMenuItem) {
+                activeMenuItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
